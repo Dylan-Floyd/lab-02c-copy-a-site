@@ -1,1 +1,1 @@
-# lab-02d-copy-a-site
+# lab-02c-copy-a-site
