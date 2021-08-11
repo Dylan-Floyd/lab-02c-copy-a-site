@@ -6,7 +6,7 @@ html, body {
 
 main {
     display: grid;
-    grid-template-rows: 70px 400px 700px;
+    grid-template-rows: 70px 400px 700px 120px 200px;
 }
 
 .nav-3 {
@@ -18,7 +18,7 @@ main {
 .card-3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 100%;
+    /* width: 600px; */
 }
 
 .nav-col {
@@ -35,11 +35,12 @@ main {
     font-size: 14px;
 }
 
-.nav-col h1 {
-    margin: 10px;
-    color: #1f3bda;
-    font-family: 'Roboto';
-    font-size: 34px;
+.logo {
+    margin: 10px !important;
+    color: #1f3bda !important;
+    font-family: 'Roboto' !important;
+    font-size: 34px !important;
+    text-decoration: none;
 }
 
 .search {
@@ -66,9 +67,8 @@ main {
 .info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 100px;
     font-family: 'Hahmlet';
     text-align: center;
 }
@@ -82,9 +82,16 @@ main {
     border-color: darkgray;
     border-style: solid;
     border-width: 1px;
-    margin: 5px;
+    margin: 20px;
     padding: 10px;
-    box-shadow: 2px 2px 2px 2px darkgray;
+    box-shadow: 2px 2px 8px 2px darkgray;
+    width:250px;
+    transition: transform .5s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform .5s;
 }
 
 h2 {
@@ -102,4 +109,146 @@ h2 {
     text-decoration: none;
     margin-bottom: 10px;
     margin-top: 20px;
+}
+
+.card:hover a {
+    background-color: #1f3bda;
+    transition: background-color .5s;
+    color: white;
+}
+
+.browse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.browse ul {
+    display: flex;
+    padding: 0;
+}
+.browse-option {
+    width: 100px;
+}
+
+.browse-li {
+    width: 200px;
+    display: inline;
+    text-align: center;
+    border-left-color: rgb(180, 180, 180);
+    border-left-width: 1px;
+    border-left-style: solid;
+}
+
+.browse-li:nth-child(1) {
+    border-style: none;
+}
+
+.browse-button {
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    font-size: 18px;
+}
+
+.browse-button:hover {
+    text-decoration: underline;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-color: rgb(180, 180, 180);
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    padding: 20px
+}
+
+.links-ul {
+    list-style-type: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.links-li {
+    display: inline;
+    padding: 10px;
+}
+
+.links-button {
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    font-size: 14px;
+    height: 30px;
+}
+
+.links-button:hover {
+    text-decoration: underline;
+}
+
+.links-privacy {
+    background-color: rgba(0, 0, 0, 0);
+    color: #1f3bda;
+    border-style: none;
+    font-size: 16px;
+    height: 30px;
+    margin-top: 25px;
+}
+
+.links-privacy:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin: auto;
+}
+.legal {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.legal p {
+    max-width: 740px;
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.apps {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.app {
+    font-weight: 600;
+    padding: 10px;
+    margin: 10px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: 'Roboto';
+}
+
+.socials em {
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+.footer-img {
+    background-image: url(http://www.placekitten.com/1920/205);
+    height: 200px;
 }
